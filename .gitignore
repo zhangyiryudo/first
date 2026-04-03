@@ -1,0 +1,24 @@
+# Compiled binaries
+*.o
+*.a
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+
+# Build artifacts
+build/
+dist/
+*.dSYM/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Common binary patterns
+hello
+main
