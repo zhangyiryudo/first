@@ -1,11 +1,10 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall
-LDLIBS = -ltbb
+CXXFLAGS = -std=c++17 -Wall -fsanitize=address
 TARGET = hello
 SRC = main.cpp
 
 $(TARGET): $(SRC)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC) $(LDLIBS)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
 
 clean:
 	rm -f $(TARGET)
