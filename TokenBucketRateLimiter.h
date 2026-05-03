@@ -1,8 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <mutex>
-// 2. 令牌桶 (Token Bucket) —— 面试最常考
-// 核心思想：
+// 2. 令牌桶 (Token Bucket) —— 面试最常考        核心思想：
 // 系统以恒定的速率生成令牌放入桶中，桶有一个最大容量。当请求到来时，
 // 必须从桶中消耗一个令牌才能被处理。如果桶空了，请求就会被拒绝。
 

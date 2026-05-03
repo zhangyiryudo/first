@@ -1,25 +1,23 @@
-# C++ Hello World Project
+# C++ Rate Limiter
 
-A simple C++ program that prints "Hello, World!" to the console.
+## 实现一个窗口限流器
+香港交易所对申报订单有速率限制，比如每秒最多允许 10 笔订单。请用 Go 语言 
+实现一个窗口限流器，要求如下：
+- 速率限制与排队机制：每秒最多允许 $N$ 笔订单申报（如 $N=10$）。
+- 跨窗口处理：超出限制的订单自动排队到下一个窗口。示例：比如 09:30:00 - 09:30:01 进来 15 笔订单，那么要求在最短的时间内完成 10 笔订单申报，并且剩余的 5 笔在下一个窗口 09:30:01 - 09:30:02 到来的时候以最快的速度完成申报。
+- 并发安全：限流器应支持高并发调用，保证线程安全。
+- 自动轮转：实现定时窗口轮转，每秒自动处理队列。
 
 ## Building and Running
-
 To build the project:
 ```
 make
 ```
-
 To run the program:
 ```
 ./hello
 ```
-
 To clean up:
 ```
 make clean
 ```
-
-## Requirements
-
-- C++ compiler (g++ recommended)
-- Make utility
